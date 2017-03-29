@@ -2,8 +2,9 @@
 
 
 
-Ranger::Ranger(std::string name) : _name(name)
+Ranger::Ranger(std::string name) : Mook(name)
 {
+	_tag = "ranger";
 }
 
 

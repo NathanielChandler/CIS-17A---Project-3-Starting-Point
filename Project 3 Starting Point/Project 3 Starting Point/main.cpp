@@ -61,14 +61,16 @@ void AddAdventurer(const shared_ptr<Guild> guild)
 
 	int choice = -1;
 	cin >> choice;
+	auto bob = new Mook("NULL");
 	switch (choice)
 	{
-	case 1: guild->AddMage(name); break;
+	case 1: auto bob = new Mage(name); break;
 	case 2: guild->AddRanger(name); break;
 	case 3: guild->AddPaladin(name); break;	
 	case 4: guild->AddWarrior(name); break;
 	default: cout << "Invalid choice!"; break;
 	}
+	guild->AddMook(*bob);
 	system("pause");
 }
 

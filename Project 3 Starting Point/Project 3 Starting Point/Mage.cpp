@@ -1,7 +1,8 @@
 #include "Mage.h"
 
-Mage::Mage(std::string name) : _name(name)
+Mage::Mage(std::string name) : Mook(name)
 {
+	_tag = "mage";
 }
 
 

@@ -32,9 +32,10 @@ void Guild::AddWarrior(std::string name)
 	_warriors.push_back(warrior);
 }
 
-void Guild::AddMook(std::shared_ptr<Mook(std::string name)>)
+void Guild::AddMook(Mook *bob)
 {
-
+	auto mook = std::make_shared<Mook>(*bob);
+	_mooks.push_back(mook);
 }
 
 std::string Guild::GetInfo()

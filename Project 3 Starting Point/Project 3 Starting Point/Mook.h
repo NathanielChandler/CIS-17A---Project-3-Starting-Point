@@ -9,7 +9,7 @@ protected:
 public:
 	Mook(std::string name);
 	~Mook();
-	std::string GetTag() const { return _tag };
+	std::string GetTag() const { return _tag; };
 	std::string GetName() const { return _name; }
 	std::string Attack() { return _name; }
 	
