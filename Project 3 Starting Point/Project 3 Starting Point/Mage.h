@@ -1,14 +1,11 @@
 #pragma once
 #include <string>
-class Mage
+#include "Mook.h"
+class Mage: public Mook
 {
-private:
-	std::string _name;
 public:
 	Mage(std::string name);
 	~Mage();
-
-	std::string GetName() const { return _name; }
-	std::string Attack() { return _name + " casts magic missle at the darkness!"; }	
+	std::string Attack() { return GetName() + " casts magic missle at the darkness!"; }	
 };
 

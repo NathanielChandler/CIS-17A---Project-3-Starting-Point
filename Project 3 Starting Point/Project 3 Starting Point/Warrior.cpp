@@ -1,9 +1,10 @@
 #include "Warrior.h"
 
 
-
-Warrior::Warrior(std::string name) : _name(name)
+Warrior::Warrior(std::string name) 
 {
+	Mook(name);
+	_tag = "warrior";
 }
 
 

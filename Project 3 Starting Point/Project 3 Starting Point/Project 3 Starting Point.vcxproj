@@ -113,6 +113,7 @@
     <ClCompile Include="Guild.cpp" />
     <ClCompile Include="Mage.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mook.cpp" />
     <ClCompile Include="Paladin.cpp" />
     <ClCompile Include="Ranger.cpp" />
     <ClCompile Include="Warrior.cpp" />
@@ -120,6 +121,7 @@
   <ItemGroup>
     <ClInclude Include="Guild.h" />
     <ClInclude Include="Mage.h" />
+    <ClInclude Include="Mook.h" />
     <ClInclude Include="Paladin.h" />
     <ClInclude Include="Ranger.h" />
     <ClInclude Include="Warrior.h" />

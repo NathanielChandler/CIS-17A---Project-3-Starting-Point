@@ -32,6 +32,11 @@ void Guild::AddWarrior(std::string name)
 	_warriors.push_back(warrior);
 }
 
+void Guild::AddMook(std::shared_ptr<Mook(std::string name)>)
+{
+
+}
+
 std::string Guild::GetInfo()
 {
 	std::string output = "Your guild has: \n";	

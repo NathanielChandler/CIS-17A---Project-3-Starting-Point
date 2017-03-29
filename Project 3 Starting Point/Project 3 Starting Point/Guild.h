@@ -27,6 +27,8 @@ public:
 	void AddRanger(std::string name);
 	void AddWarrior(std::string name);
 
+	void AddMook(std::shared_ptr<Mook(std::string name)>);
+
 	std::string GetInfo();
 
 	std::string AttackWithMages();
