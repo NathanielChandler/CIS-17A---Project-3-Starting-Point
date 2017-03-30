@@ -22,7 +22,6 @@ public:
 	void AddMook(Mook *bob);
 
 	std::vector<std::shared_ptr<Mook>> SearchMooks(std::string tag);
-	int CountMooks(std::string tag);
 
 	std::string GetInfo();
 	std::string AttackWithMages();

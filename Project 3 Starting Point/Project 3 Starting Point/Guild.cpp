@@ -15,11 +15,31 @@ void Guild::AddMook(Mook *bob)
 	_mooks.push_back(mook);
 }
 
+std::vector<std::shared_ptr<Mook>> Guild::SearchMooks(std::string tag)
+{
+	auto request = std::vector<std::shared_ptr<Mook>>();
+	if (tag == "all")
+	{
+		return _mooks;
+	}
+	else {
+		for (auto mooks : _mooks)
+		{
+			if (mooks->GetTag() == tag)
+			{
+				request.push_back(mooks);
+			}
+		}
+	}
+	return request;
+}
+
 std::string Guild::GetInfo()
 {
+	std::string types[] = { "mage","ranger","warrior","paladin" };
 	std::string output = "Your guild has: \n";	
-/*
-	output += _mages.size()		> 0 ? std::to_string(_mages.size()) + " mages\n" : "No mages!\n";
+	/*
+	output += SearchMooks("mage").size() > 0 ? std::to_string(_mages.size()) + " mages\n" : "No mages!\n";
 	output += _rangers.size()	> 0 ? std::to_string(_rangers.size()) + " rangers\n" : "No rangers!\n";
 	output += _warriors.size()	> 0 ? std::to_string(_warriors.size()) + " warriors\n" : "No warriors!\n";
 	output += _paladins.size()	> 0 ? std::to_string(_paladins.size()) + " paladins\n" : "No paladins!\n";
