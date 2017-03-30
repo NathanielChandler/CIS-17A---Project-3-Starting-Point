@@ -19,15 +19,12 @@ public:
 	~Guild();
 
 	std::string GetName() const { return _name; }
-	void AddMage(std::string name);
-	void AddPaladin(std::string name);
-	void AddRanger(std::string name);
-	void AddWarrior(std::string name);
-
 	void AddMook(Mook *bob);
 
-	std::string GetInfo();
+	std::vector<std::shared_ptr<Mook>> SearchMooks(std::string tag);
+	int CountMooks(std::string tag);
 
+	std::string GetInfo();
 	std::string AttackWithMages();
 	std::string AttackWithPaladins();
 	std::string AttackWithRangers();
