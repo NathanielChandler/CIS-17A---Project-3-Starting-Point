@@ -3,9 +3,11 @@
 #include "Mook.h"
 class Mage: public Mook
 {
+private:
+	_attack = " casts magic missle at the darkness!";
 public:
 	Mage(std::string name);
 	~Mage();
-	std::string Attack() override { return GetName() + " casts magic missle at the darkness!"; }	
+	std::string Attack() { return GetName() + ; }
 };
 
