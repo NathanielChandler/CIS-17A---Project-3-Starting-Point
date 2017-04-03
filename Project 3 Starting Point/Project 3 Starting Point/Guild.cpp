@@ -47,6 +47,21 @@ std::string Guild::GetInfo()
 	return output;
 }
 
+std::string Guild::Attack(std::string tag)
+{
+	std::string output;
+	output += "You command ";
+	output += tag == "all" ? "everyone to attack!\n" : tag + "s to attack!\n";
+	
+	std::vector<std::shared_ptr<Mook>> attackers = SearchMooks(tag);
+	for (auto mook : attackers)
+	{
+		output += mook->Attack() + "\n";
+	}
+
+	return output;
+}
+
 std::string Guild::AttackWithMages()
 {
 	std::string output = "You command your mages to attack! \n";

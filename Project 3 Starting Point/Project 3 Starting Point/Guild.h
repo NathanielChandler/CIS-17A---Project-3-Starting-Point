@@ -24,6 +24,8 @@ public:
 	std::vector<std::shared_ptr<Mook>> SearchMooks(std::string tag);
 
 	std::string GetInfo();
+
+	std::string Attack(std::string tag);
 	std::string AttackWithMages();
 	std::string AttackWithPaladins();
 	std::string AttackWithRangers();

@@ -6,6 +6,6 @@ class Mage: public Mook
 public:
 	Mage(std::string name);
 	~Mage();
-	std::string Attack() { return GetName() + " casts magic missle at the darkness!"; }	
+	std::string Attack() override { return GetName() + " casts magic missle at the darkness!"; }	
 };
 
