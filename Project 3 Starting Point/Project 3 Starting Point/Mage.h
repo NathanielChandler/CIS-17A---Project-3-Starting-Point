@@ -4,10 +4,10 @@
 class Mage: public Mook
 {
 private:
-	_attack = " casts magic missle at the darkness!";
+	//_attack = " casts magic missle at the darkness!";
 public:
 	Mage(std::string name);
 	~Mage();
-	std::string Attack() { return GetName() + ; }
+	std::string Attack();
 };
 
