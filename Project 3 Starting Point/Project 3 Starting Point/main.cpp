@@ -71,7 +71,6 @@ void AddAdventurer(const shared_ptr<Guild> guild)
 	case 4: guild->AddMook(make_shared<Warrior>(name)); break;
 	default: cout << "Invalid choice!"; break;
 	}
-	//guild->AddMook(bob);
 	system("pause");
 }
 

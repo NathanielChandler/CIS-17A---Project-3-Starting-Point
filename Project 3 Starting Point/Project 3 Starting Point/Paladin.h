@@ -6,6 +6,6 @@ class Paladin: public Mook
 public:
 	Paladin(std::string name);
 	~Paladin();
-	std::string Attack() { return GetName() + " swings a giant maul at his foes!"; }
+	std::string Attack();
 };
 

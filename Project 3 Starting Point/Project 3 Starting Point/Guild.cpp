@@ -38,10 +38,10 @@ std::string Guild::GetInfo()
 	std::string types[] = { "mage","ranger","warrior","paladin" };
 	std::string output = "Your guild has: \n";	
 	
-	output += SearchMooks("mage").size() > 0 ? std::to_string(SearchMooks("mage").size()) + " mages\n" : "No mages!\n";
-	output += SearchMooks("ranger").size()	> 0 ? std::to_string(SearchMooks("ranger").size()) + " rangers\n" : "No rangers!\n";
-	output += SearchMooks("warrior").size()	> 0 ? std::to_string(SearchMooks("warrior").size()) + " warriors\n" : "No warriors!\n";
-	output += SearchMooks("paladin").size()	> 0 ? std::to_string(SearchMooks("paladin").size()) + " paladins\n" : "No paladins!\n";
+	output += SearchMooks(types[0]).size() > 0 ? std::to_string(SearchMooks(types[0]).size()) + " mages\n" : "No mages!\n";
+	output += SearchMooks(types[1]).size()	> 0 ? std::to_string(SearchMooks(types[1]).size()) + " rangers\n" : "No rangers!\n";
+	output += SearchMooks(types[2]).size()	> 0 ? std::to_string(SearchMooks(types[2]).size()) + " warriors\n" : "No warriors!\n";
+	output += SearchMooks(types[3]).size()	> 0 ? std::to_string(SearchMooks(types[3]).size()) + " paladins\n" : "No paladins!\n";
 	
 	return output;
 }
