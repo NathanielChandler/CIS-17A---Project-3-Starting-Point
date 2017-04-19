@@ -12,7 +12,7 @@ public:
 	~Mook();
 	std::string GetTag() const { return _tag; };
 	std::string GetName() const { return _name; };
-	std::string virtual Attack();
+	virtual std::string Attack();
 	
 };
 

@@ -2,6 +2,7 @@
 #include <string>
 #include <memory>
 #include "Guild.h"
+#include "Mage.h"
 using namespace std;
 
 void DisplayGuildInfo(const shared_ptr<Guild> guild);
@@ -61,16 +62,16 @@ void AddAdventurer(const shared_ptr<Guild> guild)
 
 	int choice = -1;
 	cin >> choice;
-	auto bob = new Mook("NULL");
+	auto bob = make_shared<Mook>("NULL");
 	switch (choice)
 	{
-	case 1: bob = new Mage(name); break;
-	case 2: bob = new Ranger(name); break;
-	case 3: bob = new Paladin(name); break;	
-	case 4: bob = new Warrior(name); break;
+	case 1: guild->AddMook(make_shared<Mage>(name)); break;
+	case 2: guild->AddMook(make_shared<Ranger>(name)); break;
+	case 3: guild->AddMook(make_shared<Paladin>(name)); break;
+	case 4: guild->AddMook(make_shared<Warrior>(name)); break;
 	default: cout << "Invalid choice!"; break;
 	}
-	guild->AddMook(bob);
+	//guild->AddMook(bob);
 	system("pause");
 }
 

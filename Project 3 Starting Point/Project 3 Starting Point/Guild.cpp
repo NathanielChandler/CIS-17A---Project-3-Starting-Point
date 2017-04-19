@@ -9,10 +9,9 @@ Guild::~Guild()
 }
 
 
-void Guild::AddMook(Mook *bob)
+void Guild::AddMook(std::shared_ptr<Mook>bob)
 {
-	auto mook = std::make_shared<Mook>(*bob);
-	_mooks.push_back(mook);
+	_mooks.push_back(bob);
 }
 
 std::vector<std::shared_ptr<Mook>> Guild::SearchMooks(std::string tag)

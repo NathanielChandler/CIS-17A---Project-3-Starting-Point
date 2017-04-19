@@ -19,7 +19,7 @@ public:
 	~Guild();
 
 	std::string GetName() const { return _name; }
-	void AddMook(Mook *bob);
+	void AddMook(std::shared_ptr<Mook> bob);
 
 	std::vector<std::shared_ptr<Mook>> SearchMooks(std::string tag);
 
